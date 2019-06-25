@@ -22,7 +22,7 @@ use Thrift\Transport\TSocket;
 use Thrift\Transport\TBufferedTransport;
 use lookfor9\api\ApiClient;
 
-$socket = new TSocket('127.0.0.1', 9090);
+$socket = new TSocket('92.255.199.79', 9090);
 $transport = new TBufferedTransport($socket, 1024, 1024);
 $protocol = new TBinaryProtocol($transport);
 $client = new ApiClient($protocol);
@@ -30,7 +30,7 @@ $client = new ApiClient($protocol);
 $transport->open();
 
 print $client->Hello()."\r\n";
-print $client->PhoneInfo("9196315221")."\r\n";
+print $client->PhoneInfo("your phone number")."\r\n";
 
 $transport->close();
 
